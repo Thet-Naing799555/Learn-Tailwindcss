@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* .checked{
+    appearance: none;
+
+    border: 3px solid red;
+    width: 20px;
+    height: 20px;
+}
+
+.checked:checked{
+    background: skyblue;
+} */
+
+
+/* .checked {
+
+    @apply appearance-none ;
+    @apply border-[3px] border-solid border-blue-600 ;
+    @apply w-[20px] h-[20px] ;
+}
+
+& :checked {
+    @apply bg-slate-700;
+} */
+
+.switch{
+    @apply appearance-none ;
+    @apply w-[150px] h-[60px] border-4 relative rounded-full border-black  ;
+}
+
+& :checked {
+    @apply bg-sky-500 ;
+    &::before{
+        
+        @apply translate-x-[90px]
+    }
+}
+& ::before { 
+    content: "";
+    @apply absolute bg-red-600 rounded-full top-[6px] left-[6px] w-[40px] h-[40px] transition-all duration-500 ;
+
+}
+
+
+/* .switch:checked::before {
+  @apply translate-x-[90px]
+  @apply  duration-500
+} */
