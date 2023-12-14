@@ -1,40 +1,48 @@
 /** @type {import('tailwindcss').Config} */
+
+
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  content: ["./src/**/*.{html,js}"
+            
+
+           
+],
+
   theme: {
 
+   
+  
+    container: {
+      center: true,
+      DEFAULT: '1rem',
+      sm: '2rem',
+      lg: '4rem',
+      xl: '5rem',
+      '2xl': '6rem',
+      
+     
+    },
 
 
     extend: {
 
 
-      fontFamily: {
-        sans: ['Rethink Sans', 'sans-serif'],
-        serif: ['Silkscreen', 'serif'],
-        mono: ['Silkscreen', "monospace"],
-      },
-
-
-      colors: {
-        'blue': '#1fb6ff',
-        'purple': '#7e5bef',
-        'pink': '#ff49db',
-        'orange': '#ff7849',
-        'green': '#13ce66',
-        'yellow': '#ffc82c',
-        'gray-dark': '#273444',
-        'gray': '#8492a6',
-        'gray-light': '#d3dce6',
-      },
-    
+   
 
     },
 
+   
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+   
 
 
   ],
+
+  corePlugins: {
+    preflight: false,
+  }
 }
 
